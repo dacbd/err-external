@@ -8,10 +8,6 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      # debug
-      - run: echo "${{ toJSON(github.event) }}"
-      - run: echo "${{ toJSON(github.event.release) }}"
-      - run: echo "${{ github.event.release.tag_name }}"
       - run: |
           echo "awesome release"
           curl \
